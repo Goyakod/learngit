@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export3.dtd">
+<en-export export-date="20150901T055650Z" application="Evernote" version="Evernote Mac 6.1 (452115)">
+<note><title>安装Git</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>通过Homebrew安装Git</div>
+<div>1、安装Homebrew命令：去 http://brew.sh/  复制命令 </div>
+<div>2、安装Git：brew install git</div>
+<div><br/></div>
+<div><br/></div>
+</en-note>
+]]></content><created>20150830T132337Z</created><updated>20150830T132952Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>版本库Repository</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、创建或找一个合适的目录</div>
+<div>2、在该目录下，通过 git init 命令，使这个目录成为Git可以管理的仓库</div>
+</en-note>
+]]></content><created>20150830T133008Z</created><updated>20150830T135412Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>添加文件到Git仓库</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、使用命令 git add &lt;filename&gt;</div>
+<div>2、使用命令 git commit -m &quot;提交信息&quot;，完成 </div>
+<div><br/></div>
+<div>另：</div>
+<div>1、git status 命令查看工作区状态</div>
+<div>2、git diff 可以查看修改内容</div>
+<div><br/></div>
+<div><br/></div>
+</en-note>
+]]></content><created>20150830T135414Z</created><updated>20150830T135714Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>版本回退</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、git log  --pretty=oneline 查看提交日志历史</div>
+<div>2、git reset --hard HEAD^ 回到上一版本 (HEAD指当前版本,HEAD~100回到前100个)</div>
+<div>3、git reset --hard &lt;commit id&gt; 回退到任意版本</div>
+<div>4、git reflog 查看命令历史，以便确定要回到哪个版本</div>
+<div><br/></div>
+</en-note>
+]]></content><created>20150830T135812Z</created><updated>20150830T140424Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>工作区和暂存区</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、就在电脑上能看到的目录，就是工作区，工作区里有个隐藏的.git文件。</div>
+<div>2、git add 命令，实际上是把文件修改添加到暂存区，</div>
+<div>3、git commit 命令，实际就是把暂存区的所有内容提交到当前分支</div>
+<div><br/></div>
+<div><br/></div>
+</en-note>
+]]></content><created>20150830T140436Z</created><updated>20150830T141007Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>管理修改</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、git diff HEAD --&lt;filename&gt; 命令，可以查看工作区和版本库里最新版本的区别</div>
+<div>2、git checkout -- &lt;filename&gt; 命令，可以把文件在工作区的修改全部撤销</div>
+<div>3、git reset HEAD &lt;filename&gt; + 2命令，可以把已经提交到暂存区的修改撤销</div>
+<div>4、git rm &lt;filename&gt; + git commit ，可以从版本库删除文件</div>
+</en-note>
+]]></content><created>20150830T140942Z</created><updated>20150830T141556Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>远程仓库</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、shh-keygen -t rsa -C &quot;youremail@example.com&quot;命令，创建SHH key</div>
+<div>2、在主目录里找到.shh目录，里面有id_rsa和id_rsa.pub两个文件</div>
+<div>3、登录Github，打开Account Setting，SHH Keys页面</div>
+<div>4、用id_rsa.pub里的内容，添加一个新的SHH Key</div>
+<div>5、通过Create New Repo创建一个新仓库</div>
+<div><br/></div>
+<div>本地库与远程库关联:</div>
+<div>1、在本地库目录下执行：git remote add origin https://github.com/yourAccount/yourgitRepo.git</div>
+<div>2、git push -u origin master ，把本地所有内容推送到远程库上</div>
+<div>（由于远程库是空的，我们第一次推送master分支的时候，加上-u参数，Git不但会把本地的master分支内容推送到远程的新的master分支，还会把本地跟远程的master分支关联起来，以后推送或拉取就可以简化命令。）</div>
+<div>3、git clone https://github.com/Goyakod/learngit.git，从远程库克隆</div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+</en-note>
+]]></content><created>20150830T141615Z</created><updated>20150830T142802Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>分支管理</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、git branch ，查看分支</div>
+<div>2、git branch &lt;name&gt;，创建分支</div>
+<div>3、git checkout &lt;name&gt;，切换分支</div>
+<div>4、git chectout -b &lt;name&gt;，创建+切换分支</div>
+<div>5、git merge &lt;name&gt;，合并某分支到当前分支</div>
+<div>6、git branch -d &lt;name&gt;，删除分支</div>
+<div><br/></div>
+<div>解决冲突：</div>
+<div>1、当两个分支都有提交的时候，就无法顺利合并</div>
+<div>2、需要手动解决冲突，进入有冲突的文件把&gt;&gt;&gt;&gt;,=====,&gt;&gt;&gt;&gt;的内容进行修改后，再提交</div>
+<div>3、git log --graph --pretty=oneline --abbrev-commit，查看分支合并图</div>
+<div>4、git merge --no-ff -m “” dev，禁用Fast forward合并分支</div>
+<div><br/></div>
+<div>BUG分支</div>
+<div>1、git stash，把工作区储藏，</div>
+<div>2、git stash list，查看储藏的工作区</div>
+<div>3、git stash pop，恢复之前储藏的工作区并删除</div>
+<div><br/></div>
+<div>Feature分支</div>
+<div>1、已经完成提交的分支，如果还没有合并就要删除，就必须强行删除：git branch -D &lt;name&gt;</div>
+<div><br/></div>
+<div>多人协作</div>
+<div>1、git remote -v，查看远程库信息</div>
+<div>2、git push origin &lt;branch-name&gt;，从本地推送分支到远程库，如果推送失败，先用 git pull 抓取远程的新提交</div>
+<div>3、git checkout -b &lt;branch-name&gt; orgin/&lt;branch-name&gt;，在本地创建和远程分支对应的分支</div>
+<div>4、git branch —set-upstream &lt;branch-name&gt; origin/&lt;branch-name&gt;，简历本地分支和远程分支的关联</div>
+<div>5、</div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+<div><br/></div>
+</en-note>
+]]></content><created>20150830T142605Z</created><updated>20150830T144826Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+<note><title>标签管理</title><content><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
+<en-note>
+<div>1、git tag v1.0，创建标签</div>
+<div>2、git show v1.0，查看标签信息</div>
+<div>3、git tag v0.9  &lt;commit id&gt;，为某次提交打标签</div>
+<div>4、git tag -a &lt;tagname&gt; -m “blablabla…”，指定标签信息</div>
+<div>5、git tag -d v1.0，删除标签</div>
+<div>6、git push origin v1.0，推送某标签到远程</div>
+<div>7、git push origin --tags，推送所有标签到远程</div>
+<div>8、git push origin :refs/tags/&lt;tagname&gt;，删除一个远程标签</div>
+</en-note>
+]]></content><created>20150830T144837Z</created><updated>20150830T145412Z</updated><note-attributes><author>635214208@qq.com</author><source>desktop.mac</source><reminder-order>0</reminder-order></note-attributes></note>
+</en-export>
